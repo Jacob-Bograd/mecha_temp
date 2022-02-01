@@ -1,12 +1,10 @@
-"""
+"""!
 @file ComputerInteraction2.py
 
 @details It contains a taksfile that collects data according to the readings from the
          Enconder connected to the Nucleo-L476RG 
-
-Created on Tue Oct 20 12:10:42 2020
-
-@author: horac
+@author   Nick De Simone, Jacob-Bograd, Horacio Albarran
+@date     January 30, 2022
 """
 
 import serial
@@ -29,7 +27,7 @@ class UInterface:
     
     
     def __init__(self):
-        '''
+        '''!
         @brief It creates an object for the User Interaction
         '''
         
@@ -70,7 +68,7 @@ class UInterface:
         self.Data_list = []
         
     def SendChar(self):
-        '''
+        '''!
         @brief It creates an object which transforms the input to the ASCII corresponding value
         '''
         print('\r\n')
@@ -81,13 +79,13 @@ class UInterface:
         self.ser.write((str(self.K_p) + '\r' + '\n').encode('ascii'))
         
     def transitionTo(self, newState):
-        '''
+        '''!
         @brief      Updates the variable defining the next state to run
         '''
         self.state = newState
         
     def Plot(self):
-        '''
+        '''!
         @brief It provides with the plot for the data provided
         '''
         self.plt.figure()
@@ -100,7 +98,7 @@ class UInterface:
         
         
     def run(self): 
-        '''
+        '''!
         @brief It will run the Computer Interaction code within Python
         '''
         while True:

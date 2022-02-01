@@ -35,6 +35,10 @@ Motor.enable()
 clc.control_algorithm()
 
 def main():
+    '''!
+    @brief    This is the function that the Nucleo will run on boot
+              It creates the closed loop controller object and runs the control algorithm
+    '''
     utime.sleep_ms(10) #saftey
     input_interval = 10
     # input_interval = int(input("Enter the interval"))
