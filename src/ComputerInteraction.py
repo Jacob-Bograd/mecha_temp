@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import time
 
 class UInterface:
-    '''
+    '''!
     @brief It defines a class for the User Interface interaction
     
     '''
